@@ -1,1 +1,716 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+<base href="./"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Harmonização Glútea com Prática 3D | PHD Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+<style>
+:root{--bg:#050505;--panel:#0d0d0d;--line:#272727;--white:#f5f5f5;--muted:#969696;--yellow:#f5c400}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--white);font-family:Montserrat,Arial,sans-serif}
+a{text-decoration:none;color:inherit}.container{width:min(1180px,calc(100% - 40px));margin:auto}
+.header{position:sticky;top:0;z-index:20;background:rgba(5,5,5,.88);backdrop-filter:blur(14px);border-bottom:1px solid #1f1f1f}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:900;letter-spacing:.08em}.brand span{color:var(--yellow)}
+.nav a{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.1em}
+.hero{padding:70px 0 40px}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:42px;align-items:center}
+.hero-copy .kicker{color:var(--yellow);font-size:10px;font-weight:900;letter-spacing:.17em;text-transform:uppercase}
+h1{font-size:clamp(46px,6vw,82px);line-height:.92;letter-spacing:-.055em;margin:18px 0 20px}
+.hero-copy p{color:#aaa;line-height:1.8;font-size:14px}
+.hero-banner{aspect-ratio:16/9;background:#111;border:1px solid #242424;overflow:hidden}.hero-banner img{width:100%;height:100%;object-fit:cover}
+.meta{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:28px 0}.meta div{border:1px solid #242424;background:#0b0b0b;padding:16px}
+.meta span{display:block;color:var(--yellow);font-size:8px;font-weight:900;text-transform:uppercase;letter-spacing:.12em;margin-bottom:7px}
+.meta strong{font-size:12px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}.btn{padding:14px 18px;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.1em}
+.btn-yellow{background:var(--yellow);color:#050505}.btn-dark{border:1px solid #333}
+.section{padding:70px 0}.section.dark{background:#0a0a0a}.section h2{font-size:36px;letter-spacing:-.04em;margin:0 0 18px}
+.section p{color:#929292;line-height:1.85;font-size:13px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.list{display:grid;gap:12px}.item{border:1px solid #222;background:#0c0c0c;padding:18px}.item b{display:block;color:#fff;margin-bottom:7px}.item span{color:#888;font-size:11px;line-height:1.6}
+.speaker{border-left:2px solid var(--yellow);padding-left:20px}
+.cta{text-align:center;padding:80px 0;background:radial-gradient(circle at 50% 0,rgba(245,196,0,.12),transparent 35%),#050505}
+.cta h2{font-size:44px;margin:0 0 18px}.footer{padding:34px 0;border-top:1px solid #1d1d1d;color:#666;font-size:10px}
+@media(max-width:850px){.hero-grid,.grid2{grid-template-columns:1fr}.meta{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.meta{grid-template-columns:1fr}h1{font-size:46px}.cta h2{font-size:34px}}
+
+/* ===== RODAPÉ PADRÃO PHD ACADEMY ===== */
+.site-footer{
+  background:#030303;
+  border-top:1px solid #1f1f1f;
+  padding:58px 0 24px;
+}
+.site-footer-grid{
+  display:grid;
+  grid-template-columns:1.45fr .85fr 1.15fr;
+  gap:56px;
+  align-items:start;
+}
+.site-footer-logo{
+  width:180px;
+  height:auto;
+  display:block;
+  margin-bottom:16px;
+}
+.site-footer h4{
+  margin:0 0 15px;
+  font-size:10px;
+  color:var(--yellow,#f5c400);
+  text-transform:uppercase;
+  letter-spacing:.12em;
+}
+.site-footer p,
+.site-footer a,
+.site-footer span{
+  color:#858585;
+  font-size:11px;
+  line-height:1.8;
+}
+.site-footer a{
+  display:block;
+  transition:color .25s ease;
+}
+.site-footer a:hover{color:#f5c400}
+.site-footer-company{
+  margin-top:18px;
+  padding-top:17px;
+  border-top:1px solid #1b1b1b;
+}
+.site-footer-company strong.company-name{
+  display:block;
+  color:#fff;
+  font-size:11px;
+  margin-bottom:7px;
+  letter-spacing:.03em;
+}
+.site-footer-company .company-line{
+  display:block;
+  color:#858585;
+  font-size:11px;
+  line-height:1.75;
+}
+.site-footer-company .company-line b{
+  color:#bcbcbc;
+  font-weight:700;
+}
+.site-footer-instagram{
+  display:inline-flex!important;
+  align-items:center;
+  gap:8px;
+  margin-top:10px;
+  color:#f5c400!important;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
+.site-footer-bottom{
+  margin-top:42px;
+  padding-top:18px;
+  border-top:1px solid #191919;
+  color:#555;
+  font-size:10px;
+}
+@media(max-width:800px){
+  .site-footer-grid{grid-template-columns:1fr;gap:30px}
+}
+
+
+/* ===== MENU PADRÃO HOME ===== */
+.header{
+  position:fixed!important;z-index:100!important;top:0;left:0;right:0;
+  background:rgba(5,5,5,.88)!important;backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.06)!important
+}
+.nav{height:84px;display:flex;align-items:center;gap:36px}
+.logo-official{display:flex;align-items:center;min-width:210px}
+.logo-official img{display:block;width:170px;max-height:54px;object-fit:contain;object-position:left center}
+.menu{display:flex;gap:26px;margin-left:auto}
+.menu a{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:#d7d7d7;font-weight:700;text-decoration:none}
+.nav-cta{padding:13px 18px;background:#f5c400;color:#050505;font-size:10px;font-weight:900;text-transform:uppercase;text-decoration:none}
+.menu-btn{display:none;margin-left:auto;background:none;border:0;color:#fff;font-size:24px}
+@media(max-width:1000px){
+  .menu,.nav-cta{display:none}
+  .menu-btn{display:block}
+  .menu.mobile-open{
+    display:flex;position:absolute;top:84px;left:0;right:0;background:#050505;
+    flex-direction:column;padding:25px
+  }
+}
+
+</style>
+
+<style id="conversion-upgrade">
+.conversion-strip{padding:34px 0;border-top:1px solid #1c1c1c;border-bottom:1px solid #1c1c1c;background:linear-gradient(90deg,rgba(245,196,0,.05),transparent 42%),#080808}
+.conversion-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.conv-card{border:1px solid #242424;background:#0d0d0d;padding:18px;min-height:145px}
+.conv-card .icon{width:34px;height:34px;display:grid;place-items:center;border:1px solid #333;color:var(--yellow);margin-bottom:16px;font-weight:900}
+.conv-card strong{display:block;font-size:13px;margin-bottom:8px}
+.conv-card p{margin:0!important;color:#858585!important;font-size:11px!important;line-height:1.65!important}
+.sales-box{border:1px solid rgba(245,196,0,.24);background:linear-gradient(145deg,rgba(245,196,0,.08),rgba(255,255,255,.015));padding:26px}
+.sales-box h3{font-size:26px;letter-spacing:-.03em;margin:0 0 12px}
+.sales-box p{margin:0;color:#969696;line-height:1.75;font-size:12px}
+.sales-list{display:grid;gap:10px;margin-top:18px}
+.sales-list div{display:flex;gap:10px;color:#bdbdbd;font-size:11px;line-height:1.5}
+.sales-list div:before{content:"✓";color:var(--yellow);font-weight:900}
+.urgency-box{margin-top:24px;border-left:2px solid var(--yellow);background:#0d0d0d;padding:16px 18px;color:#a7a7a7;font-size:11px;line-height:1.65}
+.urgency-box strong{color:#fff}
+@media(max-width:850px){.conversion-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.conversion-grid{grid-template-columns:1fr}}
+</style>
+
+
+<style id="microanimations-v2">
+html{scroll-behavior:smooth}
+.reveal-up{
+  opacity:0;
+  transform:translateY(26px);
+  transition:opacity .75s ease,transform .75s cubic-bezier(.2,.75,.2,1);
+}
+.reveal-up.is-visible{opacity:1;transform:none}
+.hero-copy{animation:lpHeroIn .9s ease both}
+.hero-banner{animation:lpHeroIn .9s .12s ease both;overflow:hidden}
+.hero-banner img{transition:transform 1s cubic-bezier(.2,.75,.2,1),filter .45s ease}
+.hero-banner:hover img{transform:scale(1.035);filter:saturate(1.04)}
+@keyframes lpHeroIn{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.meta div,.conv-card,.item,.sales-box{
+  transition:transform .3s ease,border-color .3s ease,background .3s ease,box-shadow .3s ease;
+}
+.meta div:hover,.conv-card:hover,.item:hover,.sales-box:hover{
+  transform:translateY(-5px);
+  border-color:rgba(245,196,0,.3);
+  box-shadow:0 18px 38px rgba(0,0,0,.24);
+}
+.btn{
+  position:relative;
+  overflow:hidden;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn-yellow:after{
+  content:"";
+  position:absolute;
+  top:-30%;left:-35%;
+  width:28%;height:160%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.45),transparent);
+  transform:skewX(-22deg);
+  animation:lpShine 4.6s ease-in-out infinite;
+}
+@keyframes lpShine{
+  0%,67%{left:-35%;opacity:0}
+  72%{opacity:1}
+  86%{left:120%;opacity:0}
+  100%{left:120%;opacity:0}
+}
+.conversion-strip{
+  position:relative;
+  overflow:hidden;
+}
+}
+.speaker{
+  transition:border-color .3s ease,transform .3s ease;
+}
+.speaker:hover{border-color:#fff;transform:translateX(4px)}
+</style>
+
+
+<style id="hero-visual-upgrade">
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 15% 12%, rgba(245,196,0,.08), transparent 22%),
+    radial-gradient(circle at 82% 18%, rgba(245,196,0,.10), transparent 24%),
+    linear-gradient(180deg,#050505 0%,#080808 100%);
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size:32px 32px;
+  opacity:.22;
+  mask-image:linear-gradient(180deg,#000,transparent 90%);
+  pointer-events:none;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  top:-10%;
+  right:-8%;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(245,196,0,.18), rgba(245,196,0,.05) 42%, transparent 68%);
+  filter:blur(14px);
+  animation:heroGlowPulse 6s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes heroGlowPulse{
+  0%,100%{transform:scale(1);opacity:.8}
+  50%{transform:scale(1.08);opacity:1}
+}
+.hero-grid{
+  position:relative;
+  z-index:2;
+}
+.hero-copy{
+  position:relative;
+}
+.hero-copy .kicker{
+  position:relative;
+  display:inline-block;
+  padding-left:46px;
+}
+.hero-copy .kicker:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:50%;
+  width:34px;
+  height:2px;
+  background:var(--yellow);
+  transform:translateY(-50%);
+}
+.hero-banner{
+  position:relative;
+  isolation:isolate;
+  border:1px solid rgba(255,255,255,.08) !important;
+  box-shadow:0 26px 70px rgba(0,0,0,.38), 0 0 0 1px rgba(245,196,0,.06) inset;
+  border-radius:2px;
+}
+.hero-banner::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.02) 38%, rgba(0,0,0,.60) 100%),
+    radial-gradient(circle at 78% 18%, rgba(245,196,0,.30), transparent 28%),
+    radial-gradient(circle at 20% 80%, rgba(245,196,0,.10), transparent 28%);
+  z-index:1;
+  pointer-events:none;
+}
+.hero-banner::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-35%;
+  width:24%;
+  height:100%;
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,.16), transparent);
+  transform:skewX(-18deg);
+  animation:lightSweep 7s ease-in-out infinite;
+  z-index:2;
+  pointer-events:none;
+}
+@keyframes lightSweep{
+  0%,70%{left:-35%;opacity:0}
+  76%{opacity:1}
+  92%,100%{left:118%;opacity:0}
+}
+.hero-banner img{
+  position:relative;
+  z-index:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:contrast(1.03) saturate(1.02);
+}
+.hero-copy h1{
+  position:relative;
+}
+.hero-copy h1::after{
+  content:"";
+  display:block;
+  width:86px;
+  height:4px;
+  background:linear-gradient(90deg,var(--yellow),transparent);
+  margin-top:16px;
+}
+.meta div{
+  background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));
+}
+.section.dark{
+  position:relative;
+  overflow:hidden;
+}
+.section.dark::before{
+  content:"";
+  position:absolute;
+  right:-120px;
+  top:30px;
+  width:340px;
+  height:340px;
+  border-radius:50%;
+  border:1px solid rgba(245,196,0,.10);
+}
+.section.dark::after{
+  content:"";
+  position:absolute;
+  right:-40px;
+  top:110px;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  border:1px dashed rgba(245,196,0,.12);
+  animation:spinSlow 20s linear infinite;
+}
+@keyframes spinSlow{
+  to{transform:rotate(360deg)}
+}
+.cta{
+  position:relative;
+  overflow:hidden;
+}
+
+}
+</style>
+
+
+<style id="floating-dots-upgrade">
+body{position:relative;overflow-x:hidden}
+.floating-dots{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+}
+.floating-dots span{
+  position:absolute;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(245,196,0,.95) 0%, rgba(245,196,0,.35) 40%, rgba(245,196,0,0) 72%);
+  box-shadow:0 0 14px rgba(245,196,0,.45), 0 0 28px rgba(245,196,0,.18);
+  opacity:.65;
+  animation:floatDot 12s ease-in-out infinite;
+}
+.floating-dots span.small{width:4px;height:4px;opacity:.55}
+.floating-dots span.medium{width:6px;height:6px}
+.floating-dots span.large{width:10px;height:10px;opacity:.75}
+.floating-dots span:nth-child(1){left:8%;top:18%;animation-duration:11s;animation-delay:-1s}
+.floating-dots span:nth-child(2){left:18%;top:72%;animation-duration:14s;animation-delay:-4s}
+.floating-dots span:nth-child(3){left:28%;top:34%;animation-duration:10s;animation-delay:-2s}
+.floating-dots span:nth-child(4){left:39%;top:84%;animation-duration:15s;animation-delay:-5s}
+.floating-dots span:nth-child(5){left:52%;top:20%;animation-duration:12s;animation-delay:-3s}
+.floating-dots span:nth-child(6){left:63%;top:66%;animation-duration:16s;animation-delay:-7s}
+.floating-dots span:nth-child(7){left:74%;top:30%;animation-duration:13s;animation-delay:-6s}
+.floating-dots span:nth-child(8){left:84%;top:78%;animation-duration:11s;animation-delay:-8s}
+.floating-dots span:nth-child(9){left:91%;top:16%;animation-duration:17s;animation-delay:-9s}
+.floating-dots span:nth-child(10){left:12%;top:52%;animation-duration:12s;animation-delay:-2.5s}
+.floating-dots span:nth-child(11){left:46%;top:50%;animation-duration:14s;animation-delay:-6.5s}
+.floating-dots span:nth-child(12){left:71%;top:10%;animation-duration:18s;animation-delay:-10s}
+@keyframes floatDot{
+  0%,100%{transform:translate3d(0,0,0) scale(1);opacity:.35}
+  25%{transform:translate3d(14px,-18px,0) scale(1.08);opacity:.75}
+  50%{transform:translate3d(-10px,-34px,0) scale(.96);opacity:.45}
+  75%{transform:translate3d(18px,-12px,0) scale(1.12);opacity:.82}
+}
+.header,.hero,.section,.conversion-strip,.cta,.footer{position:relative;z-index:1}
+.conv-card .icon{
+  color:var(--yellow) !important;
+  font-size:18px;
+  font-weight:900;
+}
+</style>
+
+
+<style id="vertical-916-upgrade">
+.hero-grid{
+  grid-template-columns: minmax(0,1.1fr) minmax(320px,420px) !important;
+  gap: 56px !important;
+  align-items: center !important;
+}
+.hero-banner{
+  width: 100% !important;
+  aspect-ratio: 9 / 16 !important;
+  max-width: 420px !important;
+  min-height: 700px;
+  margin-left: auto;
+  position: relative;
+  border: 1px solid rgba(255,255,255,.08) !important;
+  box-shadow: 0 34px 90px rgba(0,0,0,.42), 0 0 0 1px rgba(245,196,0,.08) inset !important;
+  overflow: hidden;
+  background: #0b0b0b;
+}
+.hero-banner::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.12), rgba(0,0,0,.00) 34%, rgba(0,0,0,.58) 100%),
+    radial-gradient(circle at 78% 16%, rgba(245,196,0,.22), transparent 26%),
+    radial-gradient(circle at 18% 84%, rgba(245,196,0,.08), transparent 24%);
+  z-index:1;
+  pointer-events:none;
+}
+.hero-banner::after{
+  content:"";
+  position:absolute;
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  border:1px solid rgba(245,196,0,.10);
+  top:-60px;
+  right:-100px;
+  pointer-events:none;
+}
+.hero-banner .ring{
+  position:absolute;
+  border-radius:50%;
+  border:1px solid rgba(245,196,0,.14);
+  z-index:2;
+  pointer-events:none;
+}
+.hero-banner .ring.r1{width:160px;height:160px;right:-30px;top:90px}
+.hero-banner .ring.r2{width:110px;height:110px;right:8px;top:116px;border-style:dashed}
+.hero-banner img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center top !important;
+}
+@media(max-width:950px){
+  .hero-grid{
+    grid-template-columns:1fr !important;
+    gap:32px !important;
+  }
+  .hero-banner{
+    max-width: 420px !important;
+    width: 100% !important;
+    margin: 0 auto;
+    min-height: auto;
+  }
+}
+</style>
+
+
+<style id="vertical-lights-animation-v5">
+.hero-banner{
+  position:relative;
+  overflow:hidden;
+}
+.hero-banner .light-particles{
+  position:absolute;
+  inset:0;
+  z-index:2;
+  pointer-events:none;
+}
+.hero-banner .light-particles span{
+  position:absolute;
+  bottom:-12%;
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(255,245,190,.98) 0%, rgba(245,196,0,.75) 35%, rgba(245,196,0,.15) 68%, rgba(245,196,0,0) 100%);
+  box-shadow:0 0 12px rgba(245,196,0,.55), 0 0 26px rgba(245,196,0,.22);
+  opacity:.0;
+  animation:riseParticle linear infinite;
+}
+.hero-banner .light-particles span:nth-child(1){left:10%; animation-duration:15s; animation-delay:-2s; width:5px; height:5px;}
+.hero-banner .light-particles span:nth-child(2){left:18%; animation-duration:18s; animation-delay:-6s; width:7px; height:7px;}
+.hero-banner .light-particles span:nth-child(3){left:27%; animation-duration:16s; animation-delay:-9s; width:4px; height:4px;}
+.hero-banner .light-particles span:nth-child(4){left:37%; animation-duration:20s; animation-delay:-3s; width:8px; height:8px;}
+.hero-banner .light-particles span:nth-child(5){left:46%; animation-duration:17s; animation-delay:-11s; width:5px; height:5px;}
+.hero-banner .light-particles span:nth-child(6){left:56%; animation-duration:21s; animation-delay:-7s; width:6px; height:6px;}
+.hero-banner .light-particles span:nth-child(7){left:66%; animation-duration:19s; animation-delay:-13s; width:4px; height:4px;}
+.hero-banner .light-particles span:nth-child(8){left:75%; animation-duration:16.5s; animation-delay:-4s; width:7px; height:7px;}
+.hero-banner .light-particles span:nth-child(9){left:84%; animation-duration:22s; animation-delay:-8s; width:5px; height:5px;}
+.hero-banner .light-particles span:nth-child(10){left:91%; animation-duration:18.5s; animation-delay:-15s; width:6px; height:6px;}
+
+@keyframes riseParticle{
+  0%{
+    transform:translate3d(0,0,0) scale(.65);
+    opacity:0;
+    filter:blur(.2px);
+  }
+  10%{
+    opacity:.75;
+  }
+  25%{
+    transform:translate3d(-6px,-25vh,0) scale(1);
+    opacity:.95;
+  }
+  55%{
+    transform:translate3d(8px,-58vh,0) scale(.9);
+    opacity:.65;
+  }
+  85%{
+    transform:translate3d(-4px,-90vh,0) scale(1.05);
+    opacity:.28;
+  }
+  100%{
+    transform:translate3d(0,-112vh,0) scale(.7);
+    opacity:0;
+    filter:blur(1px);
+  }
+}
+</style>
+
+</head><body>
+
+<div class="floating-dots" aria-hidden="true">
+  <span class="small"></span>
+  <span class="medium"></span>
+  <span class="large"></span>
+  <span class="small"></span>
+  <span class="medium"></span>
+  <span class="large"></span>
+  <span class="small"></span>
+  <span class="medium"></span>
+  <span class="large"></span>
+  <span class="small"></span>
+  <span class="medium"></span>
+  <span class="small"></span>
+</div>
+
+
+<header class="header">
+  <div class="container nav">
+    <a href="index.html#inicio" class="logo logo-official">
+      <img src="assets/images/site-image-01-19ffa68196.png" alt="PHD Academy">
+    </a>
+    <nav class="menu" id="menu">
+      <a href="index.html#eventos">Eventos</a>
+      <a href="index.html#formatos">Cursos</a>
+      <a href="index.html#hands-on">Hands On</a>
+      <a href="index.html#academy">Academy</a>
+      <a href="index.html#contato">Contato</a>
+    </nav>
+    <a href="index.html#eventos" class="nav-cta">Ver agenda</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+  </div>
+</header>
+
+<section class="hero"><div class="container hero-grid">
+<div class="hero-copy"><div class="kicker">Workshop PHD Academy</div><h1>Harmonização Glútea com Prática 3D</h1>
+<p>Técnicas eficientes de harmonização glútea, tendências do mercado e prática em silicone 3D com a Speaker PHD Dra. Silvana Ferreira.</p>
+<div class="meta">
+<div><span>Data</span><strong>26 de setembro de 2026</strong></div>
+<div><span>Horário</span><strong>10h às 16h</strong></div>
+<div><span>Speaker</span><strong>Dra. Silvana Ferreira</strong></div>
+<div><span>Local</span><strong>PHD — São Paulo, SP</strong></div>
+</div>
+<div class="btns"><a class="btn btn-yellow" href="https://www.sympla.com.br/evento/workshop-phd-harmonizacao-glutea-com-pratica-3d/3540197" target="_blank">Comprar no Sympla</a><a class="btn btn-dark" href="#conteudo">Ver programação</a></div>
+</div>
+<div class="hero-banner">
+<span class="ring r1"></span><span class="ring r2"></span>
+<div class="light-particles" aria-hidden="true">
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+</div><img src="assets/images/glutea-01-9fb7026366.png" alt="Harmonização Glútea com Prática 3D"></div>
+</div></section>
+
+<section class="conversion-strip">
+  <div class="container">
+    <div class="conversion-grid">
+      <div class="conv-card"><div class="icon">✓</div><strong>Coffee break</strong><p>Momento de pausa e relacionamento para ampliar conexões ao longo da experiência.</p></div>
+      <div class="conv-card"><div class="icon">✓</div><strong>Certificado</strong><p>Certificado de participação para valorizar sua atualização profissional.</p></div>
+      <div class="conv-card"><div class="icon">✓</div><strong>Networking</strong><p>Conexão com especialistas e profissionais que vivem os mesmos desafios do mercado.</p></div>
+      <div class="conv-card"><div class="icon">✓</div><strong>Condições especiais</strong><p>Benefícios e condições exclusivas PHD disponibilizados aos participantes durante o evento.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section dark">
+  <div class="container grid2">
+    <div>
+      <h2>Mais do que um workshop.</h2>
+      <p>Uma experiência desenhada para entregar conteúdo aplicável, troca com especialistas e oportunidades reais de evolução profissional.</p>
+      <div class="urgency-box"><strong>Vagas limitadas.</strong> A proposta é manter uma experiência mais próxima, com espaço para interação e aproveitamento prático.</div>
+    </div>
+    <div class="sales-box">
+      <h3>O que está incluído</h3>
+      <p>Ao participar, você terá acesso a uma experiência completa PHD Academy.</p>
+      <div class="sales-list">
+        <div>Conteúdo técnico e atualização com foco em aplicação profissional.</div>
+        <div>Certificado de participação.</div>
+        <div>Coffee break durante o encontro.</div>
+        <div>Networking com profissionais e especialistas da área.</div>
+        <div>Condições comerciais especiais disponibilizadas pela PHD durante o evento.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="conteudo"><div class="container grid2">
+<div><h2>Sobre o workshop</h2><p>O Workshop com a Speaker PHD, Dra. Silvana Ferreira, apresentará técnicas eficientes da harmonização glútea, contemplando tendências do mercado de estética e cuidados que podem diferenciar sua atuação profissional.</p>
+<p>Você também poderá aplicar, em uma dinâmica com silicone 3D, o conhecimento adquirido ao longo do evento e compreender na prática o processo de construção de um novo glúteo.</p></div>
+<div class="speaker"><h2>Dra. Silvana Ferreira</h2><p>Speaker PHD convidada para conduzir o workshop e a prática aplicada em silicone 3D.</p></div>
+</div></section>
+<section class="section"><div class="container"><h2>Programação</h2><div class="list">
+<div class="item"><b>Harmonização glútea</b><span>Técnicas, indicações e tendências do mercado.</span></div>
+<div class="item"><b>Planejamento</b><span>Cuidados e estratégias para diferenciação profissional.</span></div>
+<div class="item"><b>Prática em silicone 3D</b><span>Aplicação prática do conteúdo e compreensão do processo de construção de um novo glúteo.</span></div>
+</div></div></section>
+<section class="cta"><div class="container"><h2>Vagas limitadas.</h2><a class="btn btn-yellow" href="https://www.sympla.com.br/evento/workshop-phd-harmonizacao-glutea-com-pratica-3d/3540197" target="_blank">Comprar no Sympla</a></div></section>
+
+<footer class="site-footer">
+  <div class="container site-footer-grid">
+    <div>
+      <img class="site-footer-logo" src="assets/images/glutea-02-19ffa68196.png" alt="PHD Academy">
+      <p>Educação avançada para profissionais da estética.</p>
+
+      <div class="site-footer-company">
+        <strong class="company-name">PHD ACADEMY LTDA</strong>
+        <span class="company-line"><b>CNPJ:</b> 48.731.653/0001-77</span>
+        <span class="company-line"><b>END:</b> Av. Brig. Faria Lima, 2179, Conj. 12</span>
+        <span class="company-line">Jardim Paulistano, São Paulo, SP</span>
+      </div>
+    </div>
+
+    <div>
+      <h4>Navegação</h4>
+      <a href="index.html#eventos">Eventos</a>
+      <a href="index.html#formatos">Cursos</a>
+      <a href="index.html#hands-on">Hands On</a>
+      <a href="index.html#academy">Sobre</a>
+    </div>
+
+    <div>
+      <h4>Contato</h4>
+      <a href="https://wa.me/5511992536041" target="_blank" rel="noopener">(11) 99253-6041</a>
+      <p>São Paulo — SP</p>
+      <a class="site-footer-instagram" href="https://www.instagram.com/phdacademy.oficial/" target="_blank" rel="noopener">
+        Instagram @phdacademy.oficial
+      </a>
+    </div>
+  </div>
+
+  <div class="container site-footer-bottom">PHD Academy © 2026. Todos os direitos reservados.</div>
+</footer>
+
+
+<script>
+(function(){
+  const targets=document.querySelectorAll(
+    '.meta div,.conversion-grid .conv-card,.section h2,.section p,.speaker,.item,.sales-box,.urgency-box,.cta h2,.cta .btn'
+  );
+  targets.forEach(el=>el.classList.add('reveal-up'));
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        io.unobserve(entry.target);
+      }
+    });
+  },{threshold:.12,rootMargin:'0px 0px -35px 0px'});
+  targets.forEach((el,i)=>{
+    el.style.transitionDelay=((i%4)*60)+'ms';
+    io.observe(el);
+  });
+})();
+</script>
+
+
+<script>
+(function(){
+  const btn=document.getElementById('menuBtn');
+  const menu=document.getElementById('menu');
+  if(!btn||!menu) return;
+  btn.addEventListener('click',()=>menu.classList.toggle('mobile-open'));
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('mobile-open')));
+})();
+</script>
+
+</body></html>
