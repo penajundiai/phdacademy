@@ -1,0 +1,321 @@
+PHD ACADEMY — PACK COMPLETO KINGHOST
+=====================================
+
+VERSÃO
+Site institucional + painel administrativo próprio + páginas automáticas de eventos.
+
+TECNOLOGIA
+- Front-end: HTML/CSS/JS
+- Back-end: PHP
+- Banco: MySQL/MariaDB
+- Painel: /admin
+- Página dinâmica de evento: /evento.php?slug=nome-do-evento
+
+O PAINEL PERMITE
+- Criar evento
+- Editar
+- Duplicar
+- Excluir
+- Ativar/desativar
+- Destacar na Home
+- Ordenar
+- Upload de imagem
+- Data
+- Horário
+- Cidade
+- Endereço
+- Formato
+- Categoria
+- Descrição curta
+- Descrição completa
+- Speaker
+- Biografia do speaker
+- Programação
+- Investimento
+- Link de compra
+- Status
+
+PÁGINAS "SAIBA MAIS"
+Não precisam ser criadas manualmente.
+Ao cadastrar um evento, o sistema gera automaticamente um slug e a página passa a existir em:
+
+https://SEU-DOMINIO/evento.php?slug=nome-do-evento
+
+O botão "Saiba mais" da Home abre automaticamente essa página.
+
+INSTALAÇÃO NA KINGHOST
+
+1. No painel KingHost, crie um banco MySQL/MariaDB.
+2. Anote:
+   - host do banco
+   - nome do banco
+   - usuário
+   - senha
+3. Abra:
+   /config/database.php
+4. Preencha os dados do banco.
+5. Importe:
+   database.sql
+6. Envie todo o conteúdo do pacote para a pasta pública do domínio.
+7. Garanta permissão de escrita na pasta:
+   /uploads/eventos/
+8. Acesse:
+   https://SEU-DOMINIO/setup-admin.php
+9. Crie usuário e senha do administrador.
+10. APAGUE setup-admin.php imediatamente após criar o usuário.
+11. Entre em:
+   https://SEU-DOMINIO/admin/
+
+REQUISITOS RECOMENDADOS
+- PHP 8.1 ou superior
+- PDO MySQL habilitado
+- MySQL ou MariaDB
+- HTTPS/SSL ativo
+- mod_headers opcional
+
+SEGURANÇA INCLUÍDA
+- Password Hash / Verify
+- PHP Sessions
+- session_regenerate_id
+- PDO Prepared Statements
+- CSRF no salvamento
+- Upload apenas JPG/PNG/WEBP
+- Limite de 5 MB por imagem
+- Bloqueio de listagem de diretórios via .htaccess
+- Cabeçalhos básicos de segurança
+
+IMPORTANTE
+Se você já tiver instalado uma versão anterior deste projeto e criado as tabelas, NÃO importe este database.sql por cima sem migrar o banco. Esta versão adiciona novos campos.
+Para uma instalação nova, use o database.sql deste pacote.
+
+
+EVENTO INCLUÍDO NESTA VERSÃO
+----------------------------
+Tricologia Regenerativa: Fios de PDO e Ativos Regenerativos
+Data: 17/09/2026
+Horário: 10h às 17h
+Speaker: Dra. Diva Almeida
+Investimento: R$ 197,00
+Link de compra:
+https://www.sympla.com.br/evento/tricologia-regenerativa-fios-de-pdo-e-ativos-regenerativos/3521442
+
+A arte enviada foi adicionada em:
+/uploads/eventos/workshop-tricologia-regenerativa.png
+
+O evento já vem marcado como destaque e ativo.
+
+
+ATUALIZAÇÃO V6
+--------------
+- Logo oficial PHD Academy adicionado à Home, páginas de evento e painel.
+- Botão flutuante de WhatsApp adicionado.
+- Home inicial contém somente o evento real de Tricologia Regenerativa.
+- Botão "Saiba mais" abre automaticamente a página interna do evento.
+- Microanimações adicionadas à Home (entrada, hover e scroll).
+
+
+ATUALIZAÇÃO V7
+--------------
+- Faixa amarela com movimento contínuo em loop.
+- Textos passando horizontalmente como marquee premium.
+- Microanimações visuais extras no design:
+  - bolinhas flutuantes;
+  - anéis discretos girando no hero;
+  - linha luminosa atravessando a faixa;
+  - elemento geométrico inspirado na seta do logo pulsando.
+
+
+ATUALIZAÇÃO V8
+--------------
+As animações principais agora são controladas por JavaScript (requestAnimationFrame),
+em vez de depender apenas de CSS.
+
+Isso garante:
+- faixa amarela deslizando continuamente;
+- seta inspirada no logo atravessando a faixa;
+- elemento geométrico pulsando;
+- anel do hero girando;
+- bolinhas flutuando visivelmente.
+
+
+ATUALIZAÇÃO V9
+--------------
+- Home reforçada com mais imagens.
+- Imagem destaque adicionada no hero.
+- Nova seção visual com 3 cards/imagens.
+- Bloco Hands On/In Company agora usa imagem real.
+- Mantido o foco no evento principal sem poluir a navegação.
+
+
+ATUALIZAÇÃO V10
+---------------
+- Foto real tratada do espaço PHD Academy inserida na Home.
+- Bloco institucional "PHD Academy" agora usa a foto real.
+- Galeria ganhou imagem real do espaço.
+- Bloco Hands On / In Company também usa o espaço PHD Academy.
+- Imagem salva em: /assets/images/phd-academy-espaco-premium.png
+
+
+ATUALIZAÇÃO V11
+---------------
+- Capa oficial horizontal do evento de Tricologia adicionada.
+- Arquivo: /uploads/eventos/tricologia-capa-home-1600x900.png
+- Essa imagem passa a ser usada na Home para evitar sobreposição de textos.
+- A arte vertical anterior pode continuar sendo usada para divulgação/social.
+
+
+ATUALIZAÇÃO V12
+---------------
+- Hero inicial voltou ao layout limpo, sem imagem à direita.
+- Mantidas as microanimações no início e no restante da Home.
+- Bloco direito do hero agora usa composição visual leve, com fundo escuro e detalhes animados.
+
+
+ATUALIZAÇÃO V13
+---------------
+- Removida completamente a seção "A PHD Academy em destaque".
+- Mantidos os demais blocos, imagens reais, evento, microanimações e WhatsApp.
+
+
+ATUALIZAÇÃO V14
+---------------
+- Removida a imagem da seção "PHD Academy In Company / Levamos o conhecimento até sua clínica".
+- Bloco ajustado para layout limpo, focado só em texto e CTA.
+
+
+ATUALIZAÇÃO V15
+---------------
+- Ajustado o hero para a animação ficar em primeiro plano.
+- Elementos animados (anéis e partículas) agora passam visualmente à frente da caixa.
+- Mantida a legibilidade do texto com leve transparência no bloco.
+
+
+ATUALIZAÇÃO V16
+---------------
+- Imagem do card do evento substituída pela nova versão vertical 9:16.
+- Arquivo adicionado: /uploads/eventos/tricologia-card-9x16.png
+- Essa imagem passa a ser a capa padrão do card do evento na Home.
+
+
+ATUALIZAÇÃO V17
+---------------
+- Corrigido carregamento da imagem vertical 9:16 no card da Home.
+- A imagem agora é aplicada diretamente como background-image.
+- O degradê passou para uma camada separada, evitando esconder a foto.
+- Mantidos textos, data, botões e responsividade.
+
+
+ATUALIZAÇÃO V18 — RODAPÉ GLOBAL
+-------------------------------
+O rodapé agora é automático e compartilhado por todas as páginas públicas.
+
+Arquivo único:
+  /includes/footer.php
+
+Estilos:
+  /assets/css/footer.css
+
+Ao alterar telefone, horário, CNPJ ou endereço em includes/footer.php,
+a mudança aparece automaticamente na Home e em todas as páginas de eventos.
+
+Informações configuradas:
+- PHD ACADEMY LTDA
+- CNPJ 48.731.653/0001-77
+- Av. Brig. Faria Lima, 2179, Conj. 12
+- Jardim Paulistano, São Paulo, SP
+- WhatsApp: (11) 99253-6041
+- Segunda à Quinta: 8h às 18h
+- Sexta: 8h às 17h
+
+Observação:
+O ícone visual do Instagram está incluído, mas nenhum endereço oficial de Instagram
+foi informado neste projeto. Quando houver a URL oficial, basta trocar o elemento
+footer-instagram por um link no arquivo includes/footer.php.
+
+
+ATUALIZAÇÃO V19 — RODAPÉ
+------------------------
+- Mantido o layout escuro original do site.
+- Apenas adicionadas as informações institucionais:
+  - CNPJ
+  - endereço
+  - horários de atendimento
+- O rodapé continua global via /includes/footer.php.
+
+
+ATUALIZAÇÃO V20 — INSTAGRAM
+---------------------------
+- Adicionado link oficial do Instagram no rodapé:
+  https://www.instagram.com/phdacademy.oficial/
+- Texto: SIGA NOSSO INSTAGRAM
+- Ícone de Instagram em SVG integrado ao layout.
+
+
+ATUALIZAÇÃO — WORKSHOP HARMONIZAÇÃO GLÚTEA 3D
+---------------------------------------------
+Evento adicionado:
+Workshop PHD - Harmonização Glútea com Prática 3D
+26/09/2026 • 10h às 16h • São Paulo/SP
+Speaker: Dra. Silvana Ferreira
+
+Instalação nova: já incluído no database.sql.
+Site já instalado: importe migracao-evento-harmonizacao-glutea.sql no banco atual.
+
+
+ATUALIZAÇÃO — CARDS DE EVENTOS
+------------------------------
+Os cards da Home agora exibem as informações principais do evento:
+- Data
+- Speaker
+- Local
+- Título
+
+
+ATUALIZAÇÃO V24 — IMAGENS REAIS HARMONIZAÇÃO GLÚTEA
+---------------------------------------------------
+Card da Home: /uploads/eventos/harmonizacao-glutea-card-9x16.png
+Banner da página interna: /uploads/eventos/harmonizacao-glutea-banner-16x9.png
+
+Foi adicionada a coluna imagem_banner ao banco.
+Para site já instalado, importe migracao-imagens-evento-harmonizacao.sql.
+
+
+ATUALIZAÇÃO V25 — CORREÇÃO DE IMAGENS
+-------------------------------------
+Tricologia Regenerativa:
+- card: tricologia-card-9x16.png
+
+Harmonização Glútea:
+- card: harmonizacao-glutea-card-9x16.png
+- banner interno: harmonizacao-glutea-banner-16x9.png
+
+A arte antiga harmonizacao-glutea-3d-card.png foi removida para evitar confusão.
+
+
+PACK FINAL — DOMÍNIO PRINCIPAL
+------------------------------
+- Destino: https://www.phdacademy.com.br/
+- Home dinâmica conectada ao painel.
+- Eventos em 3 colunas desktop / 2 tablet / 1 mobile.
+- Cards 9:16.
+- Tricologia e Harmonização com Landing Pages internas.
+- Comprar direciona ao Sympla.
+- Eventos ordenados por data.
+
+
+ATUALIZAÇÃO — RODAPÉ INSTITUCIONAL
+----------------------------------
+Informações incluídas no rodapé:
+PHD ACADEMY LTDA
+CNPJ: 48.731.653/0001-77
+END: Av. Brig. Faria Lima, 2179, Conj. 12
+Jardim Paulistano, São Paulo, SP
+
+
+ATUALIZAÇÃO — SEÇÃO INSTAGRAM / REELS
+-------------------------------------
+- Nova seção Instagram na Home.
+- Cards verticais 9:16 preparados para Reels.
+- CTA para https://www.instagram.com/phdacademy.oficial/
+- Atualmente os cards apontam para o perfil oficial.
+- Para usar Reels específicos, substitua o href de cada .reel-card pelo link do Reel correspondente.

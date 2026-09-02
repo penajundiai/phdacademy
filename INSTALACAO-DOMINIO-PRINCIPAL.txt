@@ -1,0 +1,60 @@
+PHD ACADEMY — INSTALAÇÃO NO DOMÍNIO PRINCIPAL
+================================================
+
+DOMÍNIO:
+https://www.phdacademy.com.br/
+
+1. Faça backup completo do site atual.
+2. Acesse a pasta pública do domínio principal na KingHost.
+3. Remova/renomeie os arquivos antigos somente depois do backup.
+4. Envie TODO o conteúdo deste pacote para a raiz pública.
+5. Crie um banco MySQL/MariaDB na KingHost.
+6. Configure:
+   /config/database.php
+   com host, banco, usuário e senha.
+7. Importe database.sql no banco.
+8. Acesse:
+   https://www.phdacademy.com.br/setup-admin.php
+9. Crie o administrador.
+10. APAGUE setup-admin.php depois da criação.
+11. Painel:
+   https://www.phdacademy.com.br/admin/
+
+FLUXO DOS EVENTOS:
+Home → Saiba Mais → Landing Page interna
+Home/Landing Page → Comprar → Sympla
+
+IMAGENS:
+Cards e Landing Pages: 1080x1920 (9:16)
+
+IMPORTANTE:
+A Home continua conectada ao banco de dados e ao painel administrativo.
+Novos eventos cadastrados aparecem automaticamente em ordem de data.
+
+
+ATUALIZAÇÃO INSTAGRAM
+---------------------
+A Home agora possui 4 cards de Instagram em uma única linha no desktop.
+Cada card utiliza uma imagem de capa estática localizada em:
+assets/images/instagram-cover-1.png
+assets/images/instagram-cover-2.png
+assets/images/instagram-cover-3.png
+assets/images/instagram-cover-4.png
+
+Os cards NÃO usam embed do Instagram, evitando faixas brancas e falhas de carregamento.
+O clique abre a publicação correspondente no Instagram.
+
+
+ATUALIZAÇÃO V5 — HOME INDEX.HTML
+--------------------------------
+O pack agora contém:
+- index.html → Home principal estática, versão visual mais recente.
+- index.php → versão dinâmica conectada ao banco/painel.
+
+O .htaccess está configurado para carregar index.html primeiro.
+
+Para voltar a carregar a versão dinâmica como Home, altere:
+DirectoryIndex index.html index.php
+
+para:
+DirectoryIndex index.php index.html
