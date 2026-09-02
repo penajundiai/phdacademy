@@ -1,0 +1,119 @@
+/* ===== RODAPÉ GLOBAL PHD ACADEMY — LAYOUT ORIGINAL ===== */
+.global-footer{
+  background:#030303;
+  color:#fff;
+  border-top:1px solid #1f1f1f;
+  padding:58px 0 24px;
+}
+.global-footer-grid{
+  display:grid;
+  grid-template-columns:1.7fr 1fr 1.35fr;
+  gap:50px;
+  align-items:start;
+}
+.global-footer-brand img{
+  width:180px;
+  max-width:100%;
+  display:block;
+  margin-bottom:16px;
+}
+.global-footer-brand p{
+  color:#777;
+  font-size:11px;
+  line-height:1.8;
+  margin:0;
+  max-width:320px;
+}
+.global-footer h4{
+  margin:0 0 14px;
+  color:#f5c400;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.global-footer-nav a,
+.global-footer-contact a,
+.global-footer-contact span{
+  display:block;
+  color:#858585;
+  font-size:11px;
+  line-height:1.75;
+  margin:5px 0;
+  transition:color .2s ease;
+}
+.global-footer-nav a:hover,
+.global-footer-contact a:hover{
+  color:#f5c400;
+}
+.footer-company-data{
+  margin-top:18px;
+  padding-top:16px;
+  border-top:1px solid #1d1d1d;
+}
+.footer-company-data strong{
+  display:block;
+  color:#d7d7d7;
+  font-size:11px;
+  margin-bottom:8px;
+}
+.footer-company-data span{
+  color:#696969;
+  margin:3px 0;
+}
+.global-footer-bottom{
+  margin-top:42px;
+  padding-top:18px;
+  border-top:1px solid #191919;
+  color:#555;
+  font-size:10px;
+}
+@media(max-width:850px){
+  .global-footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+  .global-footer-brand{
+    grid-column:1/-1;
+  }
+}
+@media(max-width:560px){
+  .global-footer-grid{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+  .global-footer-brand{
+    grid-column:auto;
+  }
+}
+
+.footer-instagram-cta{
+  margin-top:18px;
+}
+.footer-instagram-cta a{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:#f5c400 !important;
+  font-size:10px !important;
+  font-weight:900;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.footer-instagram-cta a:hover{
+  color:#fff !important;
+}
+.instagram-icon{
+  width:28px;
+  height:28px;
+  border:1px solid #333;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  border-radius:6px;
+  transition:border-color .2s ease,background .2s ease,transform .2s ease;
+}
+.footer-instagram-cta a:hover .instagram-icon{
+  border-color:#f5c400;
+  background:#111;
+  transform:translateY(-1px);
+}
